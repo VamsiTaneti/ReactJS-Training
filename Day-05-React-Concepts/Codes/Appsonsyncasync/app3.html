@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Asynchronus Communication using Callbacks</title>
+    </head>
+    <body>
+        <script>
+            function one(cb1){
+                console.log("Doing Logic1 Execution");
+                setTimeout(cb1,5*1000)
+            }
+            function two(){
+                console.log("Doing Logic2 Execution")
+            }
+            one(two)
+        </script>
+    </body>
+</html>

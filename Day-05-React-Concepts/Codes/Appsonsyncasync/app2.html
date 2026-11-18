@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Asynchronus Communication</title>
+    </head>
+    <body>
+        <script>
+            function one(){
+                console.log("Doing Logic 1");
+            }
+            function two(){
+                console.log("Doing Logic 2")
+            }
+            function three(){
+                console.log("Doing Logic 3")
+            }
+            setTimeout(one,7*1000)
+            setTimeout(two,3*1000)
+            setTimeout(three,5*1000)
+        </script>
+    </body>
+</html>

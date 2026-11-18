@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Asynchronus  Communication using: Promise()</title>
+    </head>
+    <body>
+        <script>
+            function action1(){
+                let promise1 = new Promise((resolve,reject)=>{
+                    console.log('ENTRY');
+                    if(true){
+                        resolve("Promise is fullfilled");
+                    }else{
+                        reject("Promise is rejected");
+                    }
+                    console.log('EXIT');
+                });
+                return promise1
+            }
+
+            action1()
+            .then((arg)=>{console.log(arg)})
+            .catch((arg)=>{console.log(arg)})
+        </script>
+    </body>
+</html>

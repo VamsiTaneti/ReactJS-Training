@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Asynchronus Communication using: Promise()</title>
+  </head>
+  <body>
+    <script>
+      function Action1() {
+        return (promise1 = new Promise((resolve, reject) => {
+          console.log("Order is about to confirm");
+          setTimeout(()=>resolve(),3*1000);
+        }));
+      }
+      function Action2() {
+        return (promise1 = new Promise((resolve, reject) => {
+          console.log("Order is confirmed by Restaurent-ABC");
+          setTimeout(()=>resolve(),5*1000);
+        }));
+      }
+      function Action3(){
+        return promise1 = new Promise((resolve,reject)=>{
+            console.log("Order is Preparing");
+            resolve();
+        })
+      }
+
+      Action1()
+      .then(()=>Action2())
+      .then(()=>Action3());
+    </script>
+  </body>
+</html>

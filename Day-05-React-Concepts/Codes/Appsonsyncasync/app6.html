@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Callback Hell</title>
+    </head>
+    <body>
+        <script>
+            function one(cb1){
+                console.log("Doing Logic1 Execution.");
+                setTimeout(cb1,5*1000)
+            }
+            function two(cb2){
+                console.log("Doing Logic2 Execution after 5seconds.")
+                setTimeout(cb2,7*1000)
+            }
+            function three(cb3){
+                console.log("Doing Logic3 Execution after 7seconds.")
+                setTimeout(cb3,3*1000)
+            }
+            function four(){
+                console.log("Doing Logic4 Execution after 3 seconds.")
+            }
+            one(()=>{
+                two(()=>{
+                    three(()=>{
+                        four()
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>
