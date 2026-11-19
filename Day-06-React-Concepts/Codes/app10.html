@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Asynchronus communication using: async and await.</title>
+  </head>
+  <body>
+    <script>
+      function action1() {
+        return new Promise((resolve, reject) => {
+          console.log("Order is about to confirm.");
+          setTimeout(() => resolve(), 3 * 1000);
+        });
+      }
+      function action2(){
+        return new Promise((resolve,reject)=>{
+            console.log("Order is confirmed by Restaurent-ABC.");
+            setTimeout(()=>resolve(),5*1000);
+        });
+      }
+      function action3(){
+        return new Promise((resolve,reject)=>{
+            console.log("Order is preparing...");
+        });
+      }
+
+      async function orderCreateProcess(){
+        try{
+            await action1();
+            await action2();
+            action3();
+        }catch(error){
+            console.log(error);
+        }finally{
+            console.log("END")
+        }
+      }
+
+    orderCreateProcess();
+    </script>
+  </body>
+</html>

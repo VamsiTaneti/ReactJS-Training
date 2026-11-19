@@ -1,0 +1,10 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    background-color: rgb(213, 214, 215);
+}
+h3{
+    text-align: center;
+}
