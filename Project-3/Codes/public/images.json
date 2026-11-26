@@ -1,0 +1,33 @@
+[
+
+  {
+    "id": 1,
+    "title": "Slide 1",
+    "url": "/photo.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Slide 2",
+    "url": "/photo1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Slide 3",
+    "url": "/photo2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Slide 4",
+    "url": "/photo3.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Slide 5",
+    "url": "/photo4.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Slide 6",
+    "url": "/photo5.jpg"
+  }
+]
